@@ -20,29 +20,41 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(
+        backgroundColor: Colors.purple,
         title: Text(widget.title),
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
           children: <Widget>[
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('images/dice$_leftDice.png'),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Expanded(
+                  child: Padding(
+                    // padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.fromLTRB(8.0, 16.0, 8.0, 16.0),
+                    child: Image.asset('images/dice$_leftDice.png'),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(8.0, 16.0, 8.0, 16.0),
+                    child: Image.asset('images/dice$_rightDice.png'),
+                  ),
+                ),
+              ],
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('images/dice$_rightDice.png'),
-              ),
+            Text(
+              'You rolled ${_leftDice + _rightDice}!',
+              style: TextStyle(fontSize: 60.0),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
         onPressed: () {
           setState(() {
             _leftDice = _randomDiceValue(6);
