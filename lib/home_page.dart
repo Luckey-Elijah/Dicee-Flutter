@@ -27,18 +27,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(15.0),
-              child: Text(
-                '$_leftDice',
-                style: Theme.of(context).textTheme.headline4,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset('images/dice$_leftDice.png'),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(15.0),
-              child: Text(
-                '$_rightDice',
-                style: Theme.of(context).textTheme.headline4,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset('images/dice$_rightDice.png'),
               ),
             ),
           ],
