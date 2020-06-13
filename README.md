@@ -11,3 +11,7 @@ git clone https://github.com/Luckey-Elijah/Dicee-Flutter.git
 cd Dicee-Flutter
 flutter run
 ```
+
+## Demo
+
+![Alpha Demo](demo/demo-1.gif)
